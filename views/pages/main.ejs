@@ -1,0 +1,45 @@
+<%- include ../partials/header %>
+<%- include ../partials/menu %>
+<div class="header" style="background-color:#343a40;align-items:center">
+	<div class="row">
+        <div class="col-sm-6" style="margin-left:20%">
+          <input type="text" class="form-control" name="search" id="search">
+        </div>
+		<div class="col-sm-2">
+			<button type="button" class="btn btn-primary" style="background-color:rgb(66, 66, 247); border-color:darkblue;color:white;" onclick="makeAPICall()">Search</button>
+		</div>
+	</div>
+	<br>
+</div>
+<br>
+<div class="container" id="cards_container"> 
+
+</div>
+<br>
+<div id="reviewModal" class="modal fade">
+	<div class="modal-dialog modal-dialog-centered modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">Add Review</h4>
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			</div>
+			<div class="modal-body">
+				<form action="/main/add_review" method="POST">
+					<div class="form-group row">
+					<label class="col-sm-1 col-form-label" for="book_title">Title: </label>
+						<div class="col-sm-11">
+							<input type="text" class="form-control" name="book_title" id="book_title" readonly value="book_title">
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-sm-1 col-form-label" for="input_review">Review: </label>
+						<div class="col-sm-11">
+							<textarea class="form-control" id="input_review" name="input_review" rows="10"></textarea>
+						</div>
+					</div>
+					<div class="form-group">
+						<input type="submit" value="Submit Review" class="btn btn-primary btn-block">
+					</div>
+				</form>
+			</div>
+<% include ../partials/footer %>

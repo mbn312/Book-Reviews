@@ -1,0 +1,26 @@
+body {
+    background-color: #F2F2F2;
+}
+.container{
+    padding: 2%;
+    width: 100%;
+    height: 100%
+}
+
+.myButton {
+    background-color:rgb(66, 66, 247);
+    color:white;
+    border-color:black;
+    height:45px;
+    width:3cm;
+    border-radius: 10%;
+}
+
+.card {
+    margin-top:auto;
+    margin-bottom:auto;
+    text-align: center;
+    align-items: center;
+    border-radius: 2%;
+    border-color: darkgray;
+}

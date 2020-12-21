@@ -1,0 +1,28 @@
+<% include ../partials/header %>
+<% include ../partials/menu %>
+
+	<div class="container">
+		<br>
+		<div class="text-center">
+			<h3>Book Reviews</h3>
+		</div>
+		<br>
+		<table class="table table-bordered" style="border-color:black" id="reviews_table">
+			<tr>
+				<th class="text-center">Title</th>
+				<th class="text-center">Review</th>
+				<th class="text-center">Review Date</th>
+			</tr>
+			<% if (reviews) { 
+				var reviews_rows = '';
+				 reviews.forEach(function(data){
+					reviews_rows += '<tr class="text-center"><td style="vertical-align:middle">' + data.book_title + '</td>';
+					reviews_rows += '<td style="vertical-align:middle">' + data.review + '</td>';
+					reviews_rows += '<td style="vertical-align:middle">' + data.review_date + '</td></tr>';
+				});%>
+			<%- reviews_rows %>
+			<% } %>
+		</table>
+	</div>
+
+<% include ../partials/footer %>
